@@ -14,19 +14,33 @@ var playerScore = 0;
 
 function playRound(playerSelection, computerSelection) {
   console.log(count);
-  console.log(computerSelection, "test");
+  //console.log(computerSelection, "test");
 
   if (playerSelection == "Rock" && computerSelection == "Rock") {
     //playRound(); //called if its a tie
-    return "It's a Tie";
+
+    const valueAgainForTie = prompt(
+      "Enter Again due to Tie Rock, Paper, or Scissors: "
+    );
+    return playRound(valueAgainForTie, getComputerChoice());
+
+    //return "It's a Tie";
   } else if (playerSelection == "Paper" && computerSelection == "Paper") {
     //playRound(); //called if its a tie
+    const valueAgainForTie = prompt(
+      "Enter Again due to Tie Rock, Paper, or Scissors: "
+    );
+    return playRound(valueAgainForTie, getComputerChoice());
 
-    return "It's a Tie";
+    //return "It's a Tie";
   } else if (playerSelection == "Scissors" && computerSelection == "Scissors") {
     // playRound(); //called if its a tie
+    const valueAgainForTie = prompt(
+      "Enter Again due to Tie Rock, Paper, or Scissors: "
+    );
+    return playRound(valueAgainForTie, getComputerChoice());
 
-    return "It's a Tie";
+    //return "It's a Tie";
   }
   //For Ties
   else if (playerSelection == "Rock" && computerSelection == "Scissors") {
